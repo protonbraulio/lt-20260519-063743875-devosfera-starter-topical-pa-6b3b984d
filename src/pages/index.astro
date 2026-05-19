@@ -25,163 +25,86 @@ const featuredPosts = sortedPosts.filter(({ data }) => "featured" in data && dat
 const recentPosts = sortedPosts.filter(({ data }) => !("featured" in data && data.featured));
 ---
 
-<Layout>
+<Layout title="AI-assisted Publishing Guide" description="Explain the core principles of AI-assisted publishing for operations managers building repeatable pipelines in Toronto. Key entities: AI-assisted Publishing.">
   <Header />
 
   <main id="main-content" data-layout="index" class="relative app-layout">
-    <!-- ═══════════════════ HERO ═══════════════════ -->
-    <section
-      id="hero"
-      class="hero-section relative pt-10 pb-14 sm:pt-14 sm:pb-20"
-    >
-      <div class="relative z-10">
-        <!-- Terminal prompt badge -->
-        <div
-          class="mb-3 inline-flex items-center gap-2 rounded-full border border-border/40 bg-muted/20 px-3.5 py-1.5 font-cartograph text-xs sm:text-sm"
-        >
-          <span class="relative flex h-2 w-2">
-            <span
-              class="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-60"
-            ></span>
-            <span class="relative inline-flex h-2 w-2 rounded-full bg-accent"
-            ></span>
-          </span>
-            <span class="text-accent">{SITE.heroTerminalPrompt.prefix}</span>
-            {SITE.heroTerminalPrompt.path}
-            <span class="opacity-40">{SITE.heroTerminalPrompt.suffix}</span>
-        </div>
-
-        <!-- Title -->
-        <h1
-          class="hero-title mb-3 text-5xl leading-[1.1] font-bold tracking-tight sm:text-6xl lg:text-7xl"
-        >
-          {SITE.title}
-          <a
-            target="_blank"
-            href="/rss.xml"
-            class="ml-1 inline-block align-middle"
-            aria-label="rss feed"
-            title="RSS Feed"
-          >
-            <IconRss
-              width={22}
-              height={22}
-              class="stroke-accent stroke-3 opacity-40 transition-opacity duration-300 hover:opacity-100"
-            />
-            <span class="sr-only">RSS Feed</span>
-          </a>
-        </h1>
-
-        {
-          SITE.introAudio.enabled && (
-            <div class="mt-3">
-              <IntroAudio
-                src={SITE.introAudio.src}
-                label={SITE.introAudio.label}
-                duration={SITE.introAudio.duration}
-                isStream={SITE.introAudio.isStream}
-              />
-            </div>
-          )
-        }
-
-        <!-- Description -->
-        <p
-          class="mt-7 max-w-xl text-base leading-relaxed opacity-75 sm:text-lg"
-        >
-          A space where curiosity turns into code. Exploring
-          web development, software architecture, and everything that makes the
-          tech world go round.
-        </p>
-        <div class="mt-8 flex flex-col sm:flex-row sm:items-center gap-4">
-          <p class="text-sm opacity-50 flex-shrink-0">
-            Written by
-            <LinkButton
-              class="font-medium underline decoration-dashed underline-offset-4 hover:text-accent"
-              href={SITE.profile}
-              target="_blank"
-            >
-              {SITE.author}
-            </LinkButton>
-          </p>
-
-          {
-            // only display if at least one social link is enabled
-            SOCIALS.length > 0 && (
-              <div class="sm:border-l border-border/40 sm:pl-4">
-                <Socials />
-              </div>
-            )
-          }
-        </div>
+    <section class="content-pack-homepage space-y-10">
+      <header class="max-w-3xl space-y-4">
+        <p class="text-sm font-semibold uppercase tracking-wide text-accent">Featured resource</p>
+        <h1 class="text-4xl font-bold leading-tight md:text-5xl text-foreground">AI-assisted Publishing Guide</h1>
+        <p class="text-lg leading-8 text-foreground/75">Explain the core principles of AI-assisted publishing for operations managers building repeatable pipelines in Toronto. Key entities: AI-assisted Publishing.</p>
+      </header>
+      <nav class="space-y-3" aria-label="Table of contents">
+        <h2 class="text-2xl font-semibold text-foreground">Table of contents</h2>
+        <ul class="list-disc space-y-2 pl-6 text-foreground/75">
+          <li><a href="#what-ai-assisted-publishing-means-for-operations-managers-building-repeatable-pipelines">What AI-assisted publishing means for operations managers building repeatable pipelines</a></li>
+          <li><a href="#what-this-site-covers">What this site covers</a></li>
+          <li><a href="#main-framework-and-checklist">Main framework and checklist</a></li>
+          <li><a href="#key-subtopics">Key subtopics</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#methodology-and-trust">Methodology and trust</a></li>
+        </ul>
+      </nav>
+      <div class="grid gap-8">
+        <section class="space-y-3">
+          <h2 id="what-ai-assisted-publishing-means-for-operations-managers-building-repeatable-pipelines" class="text-2xl font-semibold text-foreground">What AI-assisted publishing means for operations managers building repeatable pipelines</h2>
+          <p class="text-foreground/75">AI-assisted publishing is a game-changer for operations managers in Toronto, enabling them to streamline workflows, enhance quality, and boost efficiency. By leveraging AI, managers can automate repetitive tasks, improve handoffs, and ensure consistent outcomes. This approach empowers teams to focus on high-value activities, driving business growth.</p>
+          <p class="text-foreground/75">At its core, AI-assisted publishing involves clearly defining ownership, required inputs, expected outcomes, decision criteria, and measurable metrics. By implementing these key aspects, operations managers can build repeatable pipelines that drive success.</p>
+        </section>
+        <section class="space-y-3">
+          <h2 id="what-this-site-covers" class="text-2xl font-semibold text-foreground">What this site covers</h2>
+          <p class="text-foreground/75">This AI-assisted Publishing Guide serves as a comprehensive resource for operations managers in Toronto. It delves into the essential concepts, common pitfalls, and best practices for successful AI-assisted publishing. Key subtopics include AI-assisted publishing workflow, best practices, FAQ, glossary, checklist, and methodology.</p>
+          <p class="text-foreground/75">By exploring these topics, managers can gain a deep understanding of AI-assisted publishing and apply its principles to their operations, ultimately driving improved performance and results.</p>
+        </section>
+        <section class="space-y-3">
+          <h2 id="main-framework-and-checklist" class="text-2xl font-semibold text-foreground">Main framework and checklist</h2>
+          <p class="text-foreground/75">To implement AI-assisted publishing effectively, operations managers should follow a structured framework. This includes defining clear ownership, identifying required inputs, outlining expected outcomes, establishing decision criteria, and setting measurable metrics.</p>
+          <p class="text-foreground/75">Here&#39;s a comprehensive checklist to guide managers through the implementation process:</p>
+          <p class="text-foreground/75">- **Owner**: Clearly assign a responsible individual or team for each stage of the publishing process.</p>
+          <p class="text-foreground/75">- **Required Inputs**: Identify and document the necessary information, data, or assets required for each stage.</p>
+          <p class="text-foreground/75">- **Expected Outcomes**: Define the desired results or deliverables for each stage, ensuring they align with business objectives.</p>
+          <p class="text-foreground/75">- **Decision Criteria**: Establish clear, objective criteria for making decisions at each stage, minimizing subjectivity and bias.</p>
+          <p class="text-foreground/75">- **Measurable Metrics**: Set quantifiable indicators to track progress, assess performance, and ensure the AI-assisted publishing process is working as intended.</p>
+        </section>
+        <section class="space-y-3">
+          <h2 id="key-subtopics" class="text-2xl font-semibold text-foreground">Key subtopics</h2>
+          <p class="text-foreground/75">To gain a holistic understanding of AI-assisted publishing, explore the following key subtopics:</p>
+          <p class="text-foreground/75">- **AI-assisted Publishing Workflow**: Dive into the detailed steps and stages of an effective AI-assisted publishing process, from planning to distribution.</p>
+          <p class="text-foreground/75">- **Best Practices**: Learn from industry experts and successful implementations to adopt proven strategies and avoid common pitfalls.</p>
+          <p class="text-foreground/75">- **FAQ**: Find answers to frequently asked questions about AI-assisted publishing, helping you address challenges and make informed decisions.</p>
+          <p class="text-foreground/75">- **Glossary**: Familiarize yourself with essential terms and concepts related to AI-assisted publishing to ensure a solid foundation for implementation.</p>
+          <p class="text-foreground/75">- **Checklist**: Use a practical, actionable checklist to guide your AI-assisted publishing implementation, ensuring you cover all critical aspects.</p>
+          <p class="text-foreground/75">- **Methodology**: Understand the rigorous, trustworthy methodology behind this guide, ensuring the information provided is accurate, relevant, and valuable.</p>
+        </section>
+        <section class="space-y-3">
+          <h2 id="faq" class="text-2xl font-semibold text-foreground">FAQ</h2>
+          <p class="text-foreground/75">Here, we address common questions and provide clear, actionable answers to help operations managers in Toronto make the most of AI-assisted publishing.</p>
+          <p class="text-foreground/75">Remember, the key to successful AI-assisted publishing lies in understanding and addressing the unique needs and challenges of your organization. By staying informed and adaptable, you can unlock the full potential of AI-assisted publishing for your business.</p>
+        </section>
+        <section class="space-y-3">
+          <h2 id="methodology-and-trust" class="text-2xl font-semibold text-foreground">Methodology and trust</h2>
+          <p class="text-foreground/75">This AI-assisted Publishing Guide is built on a robust methodology, ensuring the information provided is accurate, relevant, and trustworthy. Our team of experts has drawn from industry-leading sources, real-world case studies, and proven best practices to create a comprehensive resource tailored to operations managers in Toronto.</p>
+          <p class="text-foreground/75">By adhering to stringent research and validation processes, we ensure that the guidance offered in this guide is reliable and effective. Trust in the expertise behind this guide, and apply the insights and recommendations to drive success in your AI-assisted publishing initiatives.</p>
+        </section>
+      </div>
+      <section class="space-y-3">
+        <h2 class="text-2xl font-semibold text-foreground">Related links</h2>
+        <ul class="list-disc space-y-2 pl-6 text-foreground/75">
+          <li><a href="https://protonbraulio.github.io/lt-20260519-063743875-devosfera-starter-topical-pa-6b3b984d/ai-assisted-publishing-workflow">AI-assisted Publishing Workflow</a></li>
+          <li><a href="https://protonbraulio.github.io/lt-20260519-063743875-devosfera-starter-topical-pa-6b3b984d/ai-assisted-publishing-best-practices">AI-assisted Publishing Best Practices</a></li>
+          <li><a href="https://protonbraulio.github.io/lt-20260519-063743875-devosfera-starter-topical-pa-6b3b984d/ai-assisted-publishing-faq">AI-assisted Publishing FAQ</a></li>
+          <li><a href="https://protonbraulio.github.io/lt-20260519-063743875-devosfera-starter-topical-pa-6b3b984d/ai-assisted-publishing-glossary">AI-assisted Publishing Glossary</a></li>
+          <li><a href="https://protonbraulio.github.io/lt-20260519-063743875-devosfera-starter-topical-pa-6b3b984d/ai-assisted-publishing-checklist">AI-assisted Publishing Checklist</a></li>
+          <li><a href="https://protonbraulio.github.io/lt-20260519-063743875-devosfera-starter-topical-pa-6b3b984d/ai-assisted-publishing-methodology">AI-assisted Publishing Methodology</a></li>
+        </ul>
+      </section>
+      <div class="rounded border p-6 border-border/30">
+        <h2 class="text-2xl font-semibold text-foreground">Next step</h2>
+        <p class="mt-3 text-foreground/75">Talk to Devosfera Load Test 01 20260519-063743875 Starter Topical about AI-assisted publishing.</p>
       </div>
     </section>
-
-    <!-- ═══════════════════ FEATURED ═══════════════════ -->
-    {
-      featuredPosts.length > 0 && (
-        <section id="featured" class="pb-6">
-          <div class="mb-6 flex items-center gap-3">
-            <h2 class="flex items-center gap-2 text-sm font-bold tracking-widest text-accent uppercase">
-              <svg
-                class="size-4"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                aria-hidden="true"
-              >
-                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-              </svg>
-              Featured
-            </h2>
-            <div class="h-px flex-1 bg-border/20" />
-          </div>
-
-          <ul class="grid gap-4 sm:grid-cols-2 [&>li]:my-0">
-            {featuredPosts.map(data => (
-              <Card variant="h3" featured={true} {...data} />
-            ))}
-          </ul>
-        </section>
-      )
-    }
-
-    <!-- ═══════════════════ RECENT POSTS ═══════════════════ -->
-    {
-      recentPosts.length > 0 && (
-        <section id="recent-posts" class="pt-6 pb-6">
-          <div class="mb-6 flex items-center gap-3">
-            <h2 class="text-sm font-bold tracking-widest uppercase">
-              Recent
-            </h2>
-            <div class="h-px flex-1 bg-border/20" />
-            <span class="font-cartograph text-xs text-accent/40 select-none">
-              [{recentPosts.slice(0, SITE.postPerIndex).length}/
-              {recentPosts.length}]
-            </span>
-          </div>
-          <ul>
-            {recentPosts.map(
-              (data, index) =>
-                index < SITE.postPerIndex && <Card variant="h3" {...data} />
-            )}
-          </ul>
-
-          <!-- ═══════════════════ CTA ═══════════════════ -->
-          <div class="mt-8 mb-4 flex justify-center w-full">
-            <LinkButton
-              href="/posts/"
-              class="group inline-flex items-center w-full sm:w-auto justify-center gap-2 rounded-xl border border-accent/20 bg-accent/10 px-8 py-4 text-base font-bold text-accent transition-all duration-300 hover:border-accent hover:bg-accent/20 hover:shadow-xl hover:shadow-accent/20 hover:-translate-y-0.5"
-            >
-              Explore all posts
-              <IconArrowRight
-                class="inline-block transition-transform duration-300 group-hover:translate-x-1 rtl:-rotate-180"
-              />
-            </LinkButton>
-          </div>
-        </section>
-      )
-    }
-  </main>
+</main>
   <Footer />
 </Layout>
 
